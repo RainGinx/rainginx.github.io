@@ -1,0 +1,93 @@
+.testbox {
+  width: 300px;
+  height: 200px;
+}
+
+#grad1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 8s;
+  animation-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0.1);
+}
+
+#grad1:hover {
+  width:600px;
+}
+#grad1 {
+  height: 200px;
+  background-image: repeating-linear-gradient(90deg,red, yellow 10%, green 20%);
+}
+
+#myDIV {
+  background-color: red;
+  border: 1px solid black;
+  background-size: 20px 20px;
+  animation: mymove 5s infinite;
+  
+}
+/* @keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+} */
+@keyframes mymove {
+  5% {background-color: blue ;}
+}
+
+#myDIV1 {
+  border: 1px solid black;
+  background-image: url('./src/img/w3logo-1.png');
+  background-size: 20px 20px;
+  animation: mymove1 5s infinite;
+  
+}
+
+@keyframes mymove1 {
+  80% {background-size: 125px 125px;}
+}
+
+#myDIV2 {
+  border: 1px solid black;
+  background-image: url('./src/img/w3logo-1.png');
+  background-position: top left;
+  animation: mymove2 5s infinite;
+}
+@keyframes mymove2 {
+  50% {background-position: center;}
+}
+
+#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+#main div {
+  flex: 1;
+}
+
+#m_blue {
+  align-self: center;
+}
+
+#myDIV3
+{
+width:100px;
+height:100px;
+background:red;
+position:absolute;
+
+animation:mymove3 5s infinite;
+clip: rect(0,100px,100px,0);
+}
+
+@keyframes mymove3
+{
+from {top:0px;}
+to {top:200px;}
+5% {background-color: blue ;}
+50% {clip: rect(0,50px,50px,0);}
+}
